@@ -34,7 +34,7 @@ tl.to('.bottom-section',{
         scroller: "body", // or your custom container like ".my-container"
         start: "top 80%", // Make sure opacity starts as soon as the section hits the viewport
         end: "top 40%", // Optional: adjust how long opacity change lasts
-        markers: true, // Set to true for debugging
+        // markers: true, // Set to true for debugging
         scrub: true, // Optional: smooth the opacity change with the scroll
     }
 })

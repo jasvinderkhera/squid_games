@@ -2,6 +2,10 @@
     color:#ff1b7b;
 }
 
+.text-color2{
+    color: rgb(173, 172, 172);
+}
+
 .gamebg{
     background-color: #ff1b7b;
 }
@@ -111,4 +115,24 @@ nav{
 .netflix-desc{
     max-width: 900px;
     margin: auto;
+}
+
+@media screen and (max-width:768px) {
+
+    nav{
+        padding: 16px 24px;
+    }
+
+    .bottom-section{
+        padding: 20px 24px;
+    }
+
+    .hero-section .logo-section {
+        width: 100%;
+    }
+    .netflix iframe{
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+    }
 }

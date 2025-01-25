@@ -10,7 +10,8 @@
 <body>
     <div>
         <div class="bg-wrapper">
-            <video src="./assets/bg.webm" muted autoplay loop></video>
+            <video src="./assets/bg.webm" muted autoplay loop class="d-md-block d-none"></video>
+            <video src="./assets/portrait_bg.webm" muted autoplay loop class="d-block d-md-none"></video>
         </div>
         <nav class="d-flex justify-content-between">
             <div class="menu p-2">
@@ -33,7 +34,7 @@
         <section class="hero-section px-5 py-3 d-flex flex-column justify-content-center align-items center">
             <div class="logo-section d-flex flex-column justify-content-center align-items-center py-5">
                 <img src="./assets/images/logo (2).png" alt="" class="img-fluid">
-                <div class="buttons d-flex gap-3 mb-5">
+                <div class="buttons d-flex flex-column flex-md-row gap-3 mb-5">
                     <button class="downloadBtn gamebg rounded-5">Download Now</button>
                     <button class="redeemBtn rounded-5">Redeem Code</button>
                 </div>
@@ -45,24 +46,32 @@
            
 
         </section>
-        <section class="netflix d-flex flex-column justify-content-center align-items-center uniformpadding">
+        <section class="netflix d-flex flex-column justify-content-center align-items-center uniformpadding px-3 px-md-0">
             <iframe width="898" height="503" class="mt-5" src="https://www.youtube.com/embed/sT-WR6zdJj0" title="Squid Game: Unleashed | Official Launch Trailer | Netflix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-            <div class="netflix-desc">
-                <h2 class="text-white h1 fw-bold mt-5">Squid Game Season 2
+            <div class="netflix-desc uniformpadding">
+                <h2 class="text-white h1 fw-bold text-center">Squid Game Season 2
+                    <br>
                     Watch Along Challenge</h2>
-                    <div class="preregistration-body d-flex align-items-center gap-3 p-3 pt-5 text-white">
-                        <div class="preregistration-info">
-                        <p class="xlarge">Squid Game: Unleashed is available for everyone to play, no paid membership required.  And now you can unlock in-game rewards when you watch Squid Game season 2.    
-                        
-                        </p><p>Every time you watch a new episode of Squid Game Season 2, you’ll automatically unlock valuable in-game rewards in Squid Game: Unleashed.  </p>
-                        <p>The Squid Game Season 2 Watch Along starts on December 26th and will run for a limited time.  </p>
-                        <p>Use the rewards to unlock new characters, outfits, and abilities.  </p>
-                        <p>If you watch all of the episodes in Season 2 before the end of the Watch Along Event you'll unlock the Binge-Watcher in-game outfit.</p><p></p>
-                        </div>
-                        
-                        <div class="preregister-qrcode">
-                        <img src="https://dx35vtwkllhj9.cloudfront.net/netflix/squid-game-unleashed/images/preregister-qrcode.webp" class="img-fluid">
+                    <div class="preregistration-body p-3 pt-5 text-white">
+                        <div class="row">
+                            <div class="preregistration-info col-md-7">
+                                <p class="fw-semibold">Squid Game: Unleashed is available for everyone to play, no paid membership required.  And now you can unlock in-game rewards when you watch Squid Game season 2.    
+                                
+                                </p>
+                                <hr class="game-pink">
+                                <p class="text-color2">Every time you watch a new episode of Squid Game Season 2, you’ll automatically unlock valuable in-game rewards in Squid Game: Unleashed.  </p>
+                                <p class="text-color2 mb-1" >The Squid Game Season 2 Watch Along starts on December 26th and will run for a limited time.  </p>
+                                <p class="text-color2 mb-1" >Use the rewards to unlock new characters, outfits, and abilities.  </p>
+                                <p class="text-color2 mb-1" >If you watch all of the episodes in Season 2 before the end of the Watch Along Event you'll unlock the Binge-Watcher in-game outfit.</p><p></p>
+                                </div>
+                                
+                                <div class="preregister-qrcode p-md-5 p-2 col-md-5">
+                                <img src="https://dx35vtwkllhj9.cloudfront.net/netflix/squid-game-unleashed/images/preregister-qrcode.webp" class="img-fluid d-none d-md-block">
+                                <button class="downloadBtn gamebg rounded-3 py-2 px-3 d-block d-md-none btn w-100 mb-3 fw-bold text-white">APP STORE</button>
+                                <button class="downloadBtn gamebg rounded-3 py-2 px-3 d-block d-md-none btn w-100 mb-3 fw-bold text-white">GOOGLE PLAY</button>
+                                <button class="downloadBtn gamebg rounded-3 py-2 px-3 d-block d-md-none btn w-100 mb-3 fw-bold text-white">GALAXY STORE</button>
+                                </div>
                         </div>
         
                         </div>

@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .game-pink{
     color:#ff1b7b;
 }
@@ -48,6 +52,12 @@ nav{
     right: 0;
     left: 0;
     padding: 16px 40px;
+    z-index: 2;
+}
+.navBtn{
+    padding: 8px;
+    box-shadow: 0px 0px 13px #ff1b7b;
+    font-weight: 900;
 }
 .bottom-section{
     position: fixed;
@@ -55,6 +65,31 @@ nav{
     right: 0;
     left: 0;
     padding: 30px 40px;
+}
+.menu-page{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #0d0d0d;
+    z-index: 1;
+}
+.menu-page .menu-logo img{
+    height: 100px;
+    object-fit: contain;
+}
+.menuItems a{
+    font-size: 2rem;
+}
+.closeLogo{
+    position: absolute;
+    padding: 8px;
+    border: 3px solid #ff1b7b;
+    border-radius: 50%;
+    top: 16px;
+    left: 34px;
+    z-index: 3;
 }
 
 .menu{
@@ -115,6 +150,21 @@ nav{
 .netflix-desc{
     max-width: 900px;
     margin: auto;
+}
+.netflix-win-die{
+    max-width: 900px;
+    margin: auto;
+}
+
+.netflix-win-die .games-img{
+    max-width: 300px;
+    margin: auto;
+    height: 150px;
+}
+.netflix-win-die .games-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 @media screen and (max-width:768px) {

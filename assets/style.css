@@ -1,5 +1,10 @@
 html{
     scroll-behavior: smooth;
+    /* scrollbar-width:none; */
+}
+
+.gray{
+    color: gray;
 }
 
 .game-pink{
@@ -84,8 +89,9 @@ nav{
 }
 .closeLogo{
     position: absolute;
-    padding: 8px;
+    padding: 6px;
     border: 3px solid #ff1b7b;
+    box-shadow: 0px 0px 4px #ff1b7b;
     border-radius: 50%;
     top: 16px;
     left: 34px;
@@ -113,7 +119,20 @@ nav{
    font-weight: bold;
    color: white;
    text-transform: uppercase;
+   background-color: #ff1b7b;
    box-shadow: 0px 0px 4px #ff1b7b;
+   transition: 350ms;
+}
+.hero-section .downloadBtn:hover{
+   border: none;
+   padding: 8px 20px;
+   font-size: 18px;
+   font-weight: bold;
+   color: white;
+   background-color: #0d0d0d;
+   text-transform: uppercase;
+   box-shadow: 0px 0px 4px #ff1b7b;
+   transition: 350ms;
 }
 .hero-section .redeemBtn:hover{
     border: 2px solid white;
@@ -140,7 +159,7 @@ nav{
 .netflix{
     min-height: 100vh;
     width: 100%;
-    background-color: black;
+   background-color: #0d0d0d;
 }
 
 .netflix iframe{
@@ -159,13 +178,58 @@ nav{
 .netflix-win-die .games-img{
     max-width: 300px;
     margin: auto;
-    height: 150px;
+    height: 100px;
 }
 .netflix-win-die .games-img img{
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
+
+.gallery{
+    background-color: #0d0d0d;
+}
+
+/* slider */
+
+
+.swiper {
+    height: 100%;
+    width: 100%;
+  }
+  .swiper-button-prev:after{
+    position: absolute;
+    left: 80px;
+    top:0px;
+  padding: 15px 25px;
+  color: white;
+  border-radius: 50%;
+  }
+  .swiper-button-next:after{
+    position: absolute;
+    right: 80px;
+    top: 0px;
+  padding: 15px 25px;
+  color: white;
+  border-radius: 50%;
+  }
+
+  .swiper-slide .image-container{
+    height: auto;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: -1px -1px 9px 0px #ff1b7b;
+  }
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal{
+    position: absolute;
+    bottom: 0px;
+  }
+  .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: #ff1b7b !important;
+  }
+  .swiper-pagination-bullet{
+    background-color: rgb(255, 255, 255) !important;
+  }
 
 @media screen and (max-width:768px) {
 
@@ -184,5 +248,8 @@ nav{
         height: auto;
         width: 100%;
         object-fit: cover;
+    }
+    .swiper-button-prev:after,.swiper-button-next:after{
+        display: none;
     }
 }

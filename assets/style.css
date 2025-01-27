@@ -18,6 +18,10 @@ html{
 .gamebg{
     background-color: #ff1b7b;
 }
+.formBtn{
+    background-color: #ff1b7aa0;
+    box-shadow: 0px 0px 6px #ff1b7b;
+}
 
 .uniformpadding{
     padding: 40px 0;
@@ -188,6 +192,74 @@ nav{
 
 .gallery{
     background-color: #0d0d0d;
+}
+.code-redemption{
+    background-color: #0d0d0d;
+}
+
+footer{
+    background-color: #0d0d0d;
+}
+
+.footerItems{
+    font-size: 13px;
+}
+
+.redeemForm{
+    max-width: 900px;
+    box-shadow: -1px -1px 9px 0px #ff1b7b;
+}
+
+form input{
+    background-color: #0d0d0d;
+    border: none;
+    padding: 8px 16px;
+    box-shadow: -1px -1px 9px 0px #ff1b7b;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+}
+.accordion-item{
+    border: none;
+    border-bottom: 1px solid #ff1b7b;
+    border-radius: 0;
+}
+
+.accordion-button::after {
+background-image: url('./images/plus.png') !important;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url('./images/minus-sign.png') !important;
+}
+
+.accordion-button{
+    background-color: black;
+    border: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: black;
+    box-shadow: none;
+}
+.accordion-body{
+    background-color: black;
+    border: none;
+    color: rgb(172, 171, 171);
+}
+
+form button{
+    padding: 4px 12px;
+    background-color: #0d0d0d;
+    box-shadow: -1px -1px 9px 0px #ff1b7b;
+    border: none;
+    color: white;
+    border-radius: 50%;
+}
+form .captcha{
+    font-size: smaller;
 }
 
 /* slider */

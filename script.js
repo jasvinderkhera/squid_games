@@ -57,17 +57,12 @@ gsap.from('.navBtn',{
 let menu = gsap.timeline()
 
 
-menu.from('.menu-page',{
-    transform:"translateY(-100%)",
-    opacity:0,
-    delay:0.1,
-    duration:0.6
-})
-menu.to('.menu',{
-    y:-300,
-    opacity:0,
-    duration:0.1,
-})
+// menu.from('.menu-page',{
+//     transform:"translateY(-100%)",
+//     opacity:0,
+//     delay:0.1,
+//     duration:0.6
+// })
 menu.from('.menuItems',{
     y:-100,
     opacity:0,
@@ -83,14 +78,31 @@ let menuBtn = document.querySelector('.menu')
 
 menuBtn.addEventListener('click',function(){
     menu.play();
-    document.body.style.overflow = 'hidden';
 })
 
-function closeBtn(){
-    console.log("working")
-    document.body.style.overflow = '';
+function revAnime() {
     menu.reverse()
-}
+  }
+
+// Attach click event to all links with class 'closeModalLink'
+document.querySelectorAll('.closeModalLink').forEach(link => {
+    link.addEventListener('click', function (event) {
+      // Prevent default behavior for the link
+      event.preventDefault();
+  
+      // Close the modal
+      const modalElement = document.getElementById('fullScreenModal');
+      const modalInstance = bootstrap.Modal.getInstance(modalElement);
+      modalInstance.hide();
+  
+      // Optional: Scroll to the target section
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId.startsWith('#')) {
+        document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+  
 
 
 

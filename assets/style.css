@@ -1,6 +1,6 @@
 html{
     scroll-behavior: smooth;
-    /* scrollbar-width:none; */
+    scrollbar-width:none;
 }
 
 .gray{
@@ -61,7 +61,7 @@ nav{
     right: 0;
     left: 0;
     padding: 16px 40px;
-    z-index: 2;
+    z-index: 99;
 }
 .navBtn{
     padding: 8px;
@@ -84,7 +84,7 @@ nav{
     background-color: #0d0d0d;
     z-index: 1;
 }
-.menu-page .menu-logo img{
+.menu-logo img{
     height: 100px;
     object-fit: contain;
 }
@@ -160,6 +160,9 @@ nav{
    background-color: rgba(0, 0, 0, 0.373);
    transition: 350ms;
 }
+.desc img{
+    height: 50px;
+}
 .netflix{
     min-height: 100vh;
     width: 100%;
@@ -199,10 +202,18 @@ nav{
 
 footer{
     background-color: #0d0d0d;
+    position: relative;
 }
 
 .footerItems{
     font-size: 13px;
+}
+
+.homeArrow{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    transform: rotate(180deg);
 }
 
 .redeemForm{
@@ -307,6 +318,12 @@ form .captcha{
 
     nav{
         padding: 16px 24px;
+    }
+    .desc img{
+        height: 30px;
+    }
+    .desc .d1{
+        font-size: 15px !important;
     }
 
     .bottom-section{

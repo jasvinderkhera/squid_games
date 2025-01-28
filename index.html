@@ -36,47 +36,56 @@
         ></video>
       </div>
       <nav class="d-flex justify-content-between">
-        <div class="menu p-2">
+        <div class="menu p-2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullScreenModal">
           <img
             src="./assets/images/hamburger-menu (1).png"
             alt=""
             height="30"
           />
         </div>
-       <div class="end-section d-flex gap-5">
+       <div class="end-section d-flex gap-md-5 gap-4">
         <button class="navBtn border-0 text-white px-4 text-uppercase gamebg rounded-5">Download Now</button>
-        <div class="share p-2">
-            <img src="./assets/images/share.png" alt="" height="30" />
+        <div class="Navshare p-2 d-flex justify-content-center align-items-center position-relative">
+          <img src="./assets/images/triangle.png" alt="" height="60" class="position-absolute">
+            <img src="./assets/images/share.png" alt="" height="25"/>
           </div>
        </div>
       </nav>
-      <div class="menu-page d-flex justify-content-center align-items-center flex-column">
-        <div class="closeLogo">
-            <img src="./assets/images/close.png" alt="" class="closeBtn p-1" onclick="closeBtn()">
+      
+      <!-- Full Screen Modal -->
+      <div class="modal fade" id="fullScreenModal" tabindex="-1" aria-labelledby="fullScreenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-body d-flex justify-content-center align-items-center flex-column">
+              <div class="closeLogo mb-4">
+                <img src="./assets/images/close.png" alt="Close" class="closeBtn p-1" onclick="revAnime()" data-bs-dismiss="modal">
+              </div>
+              <div class="menu-logo mb-4">
+                <img src="./assets/images/logo (2).png" alt="Logo" class="img-fluid">
+              </div>
+              <div class="menuItems mb-4">
+                <a href="#home" class="nav-link text-white fw-bolder closeModalLink">HOME</a>
+              </div>
+              <div class="menuItems mb-4">
+                <a href="#trailer" class="nav-link text-white fw-bolder closeModalLink">TRAILER</a>
+              </div>
+              <div class="menuItems mb-4">
+                <a href="#win-die" class="nav-link text-white fw-bolder closeModalLink">ABOUT</a>
+              </div>
+              <div class="menuItems mb-4">
+                <a href="#download" class="nav-link text-white fw-bolder closeModalLink">DOWNLOAD NOW</a>
+              </div>
+              <div class="menuItems mb-4">
+                <a href="#gallery" class="nav-link text-white fw-bolder closeModalLink">GALLERY</a>
+              </div>
+              <div class="menuItems mb-4">
+                <a href="#form" class="nav-link text-white fw-bolder closeModalLink">REDEEM CODE</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="menu-logo mb-4">
-            <img src="./assets/images/logo (2).png" alt="" class="img-fluid">
-        </div>
-        <div class="menuItems mb-4">
-            <a href="" class="nav-link text-white fw-bolder" onclick="closeBtn()">HOME</a>
-        </div>
-        <div class="menuItems mb-4">
-            <a href="#trailer" class="nav-link text-white fw-bolder" onclick="closeBtn()">TRAILER</a>
-        </div>
-        <div class="menuItems mb-4">
-            <a href="#win-die" class="nav-link text-white fw-bolder" onclick="closeBtn()">ABOUT</a>
-        </div>
-        <div class="menuItems mb-4">
-            <a href="#download" class="nav-link text-white fw-bolder" onclick="closeBtn()">DOWNLOAD NOW</a>
-        </div>
-        <div class="menuItems mb-4">
-            <a href="" class="nav-link text-white fw-bolder" onclick="closeBtn()">GALLERY</a>
-        </div>
-        <div class="menuItems mb-4">
-            <a href="" class="nav-link text-white fw-bolder" onclick="closeBtn()">REDEEM CODE</a>
-        </div>
-
       </div>
+      
       <div class="bottom-section d-flex justify-content-between">
         <div class="down-arrow p-2">
           <a href="#trailer"><img src="./assets/images/down-arrow (1).png" alt="" height="30" /></a>
@@ -87,21 +96,27 @@
           <img src="./assets/images/discord.png" alt="" height="30" />
         </div>
       </div>
+      
       <section
         class="hero-section px-5 py-3 d-flex flex-column justify-content-center align-items center"
-      >
+      id="home">
         <div
-          class="logo-section d-flex flex-column justify-content-center align-items-center py-5"
+          class="logo-section d-flex flex-column justify-content-between align-items-center py-5"
         >
           <img src="./assets/images/logo (2).png" alt="" class="img-fluid" />
           <div class="buttons d-flex flex-column flex-md-row gap-3 mb-5">
             <button class="downloadBtn rounded-5">Download Now</button>
             <button class="redeemBtn rounded-5">Redeem Code</button>
           </div>
-          <div class="desc text-center">
-            <p class="text-white fs-5 text-uppercase">
+          <div class="desc mt-5 text-center">
+            <p class="text-white fs-5 text-uppercase d1">
               Squid Game: Unleashed is available for everyone to play, no paid
               membership required. Play Now!
+            </p>
+            <p class="d-flex justify-content-center gap-3">
+              <img src="./assets/images/playstore.webp" alt="">
+              <img src="./assets/images/appstore.webp" alt="">
+              <img src="./assets/images/samsungstore.webp" alt="">
             </p>
           </div>
         </div>
@@ -199,7 +214,7 @@
           </div>
         </div>
       </section>
-      <section class="gallery uniformpadding">
+      <section class="gallery uniformpadding" id="gallery">
        <div class="container py-5 p-md-5">
         <h2 class="text-white text-center fw-bolder">GALLERY</h2>
         <h5 class="text-center mb-5 gray">See gameplay images below</h5>
@@ -240,26 +255,26 @@
        </div>
       </section>
 
-      <section class="code-redemption uniformpadding">
+      <section class="code-redemption uniformpadding" id="form">
         <div class="container py-5 p-md-5">
-          <div class="container bg-black redeemForm p-5">
+          <div class="container bg-black redeemForm px-4 py-5 p-md-5">
             <h3 class="text-center text-white fw-bolder text-uppercase">code redemption</h3>
             <form class="redemptionForm mt-5">
              <div class="row align-items-center mb-4">
               <div class="col-md-3">
-                <label for="ID" class="text-white fw-bold">SQID (Squid Game ID)</label>
+                <label for="ID" class="text-white fw-bold mb-2">SQID (Squid Game ID)</label>
               </div>
               <div class="col-md-4">
                 <input type="text" placeholder="XXXXX" class="">
-                
+                <button>?</button>
               </div>
               <div class="col-md-4">
-                <button>?</button>
+                
               </div>
              </div>
              <div class="row align-items-center mb-4">
               <div class="col-md-3">
-                <label for="ID" class="text-white fw-bold">Redeem Code</label>
+                <label for="ID" class="text-white fw-bold mb-2">Redeem Code</label>
               </div>
               <div class="col-md-4">
                 <input type="text" placeholder="XXXXX">
@@ -313,18 +328,26 @@
         </div>
       </section>
 
-      <footer class="uniformpadding">
+      <footer class="uniformpadding pb-0">
         <hr class="bg-white">
-          <div class="container py-5 text-center">
+          <div class="container pt-5 text-center">
               <img src="./assets/images/legal-logos_netflix.png" alt="" class="img-fluid mb-5" width="150" >
 
-              <div class="d-flex justify-content-center gap-2">
-                <p class="text-white footerItems"> Terms and Use of Privacy Statement</p>
-                <p class="text-white footerItems">.</p>
-                <p class="text-white footerItems"> Tudum</p>
-                <p class="text-white footerItems">.</p>
-                <p class="text-white footerItems"> Cookie Preferences</p>
+              <div class="d-flex justify-content-center gap-2 flex-wrap">
+                <p class="text-white footerItems mb-0 mb-md-3"> Terms and Use of Privacy Statement</p>
+                <p class="text-white footerItems mb-0 mb-md-3">.</p>
+                <p class="text-white footerItems mb-0 mb-md-3"> Tudum</p>
+                <p class="text-white footerItems mb-0 mb-md-3">.</p>
+                <p class="text-white footerItems mb-0 mb-md-3"> Cookie Preferences</p>
               </div>
+              <div class="d-flex justify-content-center gap-2 flex-column flex-md-row pt-4 pt-md-0">
+                <p class="gray footerItems mb-0"> PLATFORM © 2024 POWSTER</p>
+                <p class="gray footerItems"> © 2024 Netflix. ALL RIGHTS RESERVED.</p>
+              </div>
+          </div>
+
+          <div class="homeArrow">
+            <a href="#home"><img src="./assets/images/down-arrow (1).png" alt="" class="img-fluid" style="height: 30px !important;"></a>
           </div>
       </footer>
     </div>
